@@ -1,0 +1,52 @@
+.job-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 13px;
+  color: #666;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e6f0ff;
+  color: #003366;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.apply-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

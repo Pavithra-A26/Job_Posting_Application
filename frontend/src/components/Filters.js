@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Filters.css';
-import type from './following.png';
+import type from './assest/user-add.png';
+import search from './assest/search.png'
+import location from './assest/marker.png'
 
 const Filters = ({ onFilterChange }) => {
   const [filters, setFilters] = useState({
@@ -19,26 +21,37 @@ const Filters = ({ onFilterChange }) => {
 
   return (
     <div className="filters">
-      <input
+      <div className='input-icon'>
+        <img src={search}/>
+        <input
+        src={search}
         type="text"
         name="title"
         placeholder="Search by Job Title, Role"
         value={filters.title}
         onChange={handleChange}
       />
-      <select name="location" value={filters.location} onChange={handleChange}>
+      </div>
+      
+      <div className='input-icon'>
+        <img src={location}/>
+        <select name="location" value={filters.location} onChange={handleChange}>
         <option value="">Preferred Location</option>
         <option value="Chennai">Chennai</option>
         <option value="Bangalore">Bangalore</option>
         <option value="Hyderabad">Hyderabad</option>
       </select>
-      <select name="type" value={filters.type} onChange={handleChange}>
+      </div>
+      <div className='input-icon'>
+        <img src={type}/>
+        <select name="type" value={filters.type} onChange={handleChange}>
         <option value="">Job Type</option>
         <option value="FullTime">FullTime</option>
         <option value="PartTime">PartTime</option>
         <option value="Contract">Contract</option>
         <option value="Internship">Internship</option>
       </select>
+      </div>
       <div className="slider-container">
         <span>Salary Per Month: ₹{filters.salary}</span>
         <input

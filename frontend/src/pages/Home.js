@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='home-page'>
       <Filters onFilterChange={handleFilterChange} />
       <div className="job-grid">
         {jobs.map((job, index) => (

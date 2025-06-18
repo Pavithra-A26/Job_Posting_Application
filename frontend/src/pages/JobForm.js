@@ -22,7 +22,7 @@ export const JobForm = ({ onClose }) => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('http://localhost:5000/jobs', formData);
+        const response = await axios.post('https://job-posting-application-d9og.onrender.com/jobs', formData);
         console.log('Job posted successfully:', response.data);
         alert('Job posted successfully!');
         setFormData({

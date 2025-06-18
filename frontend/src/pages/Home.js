@@ -22,7 +22,7 @@ const Home = () => {
       if (filters.type) params.type = filters.type;
       if (filters.salary) params.maxSalary = filters.salary;
 
-      const response = await axios.get('http://localhost:5000/jobs', { params });
+      const response = await axios.get('https://job-posting-application-d9og.onrender.com/jobs', { params });
       setJobs(response.data);
     } catch (err) {
       console.log('Error fetching jobs:', err);
